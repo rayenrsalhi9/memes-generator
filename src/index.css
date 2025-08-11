@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* start of header design */
+header {
+    background: linear-gradient(90deg, #672280, #A626D3);
+
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    padding: 1em;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 6px 6px;
+}
+
+header img {
+    width: 80px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+@media(max-width: 768px) {
+    header {
+        border-radius: 0;
+    }
+    header img {
+        width: 60px;
+    }
+    header h1 {
+        font-size: 1.75rem;
+    }
+}
+/* end of header design */
+
+
+/* start of input section design */
+form {
+    padding: 2em;
+}
+
+form .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form label {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    font-size: 1.125rem;
+}
+
+form input {
+    padding: .5em .75em;
+    border: 2px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 1.125rem;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(90deg, #672280, #A626D3);
+    border: none;
+    font-size: 1.125rem;
+    padding: .75em 1em;
+    margin-top: 1em;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #561b6b, #861bad);
+}
+
+@media(max-width: 768px) {
+    form {
+        padding: 1.5em;
+    }
+    form .top-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    form input, form label {
+        width: 100%;
+    }
+    form label:nth-last-of-type(1) {
+        margin-top: 1em;
+    }
+}
+/* end of input section design */
+
+
+/* start of meme section design */
+.meme {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.meme > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.meme span {
+    position: absolute;
+    text-align: center;
+    margin-block: 15px;
+    padding-inline: 5px;
+    font-family: impact, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.top {
+    top: 0;
+}
+
+@media(max-width: 768px) {
+    .meme > img {
+        border-radius: 0;
+    }
+}
+/* end of meme section design */
