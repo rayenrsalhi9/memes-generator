@@ -8,3 +8,11 @@ test('displays the app name', () => {
 
     expect(screen.getByText('Meme Generator')).toBeInTheDocument()
 })
+
+test('displays the image in the header', () => {
+
+    render(<Header />)
+
+    expect(screen.getByRole('img')).toBeInTheDocument()
+
+})
