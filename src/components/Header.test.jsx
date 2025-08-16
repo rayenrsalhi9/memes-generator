@@ -13,6 +13,6 @@ test('displays the image in the header', () => {
 
     render(<Header />)
 
-    expect(screen.getByRole('img')).toBeInTheDocument()
+    expect(screen.getByRole('img').src).toContain('header-icon.png')
 
 })
