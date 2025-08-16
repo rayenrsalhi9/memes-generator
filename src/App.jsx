@@ -8,8 +8,8 @@ export default function App() {
     const [allMemes, setAllMemes] = useState([])
 
     const [meme, setMeme] = useState({
-        topText: '',
-        bottomText: '',
+        topText: 'Shut up',
+        bottomText: 'And take my money',
         imageUrl: 'https://i.imgflip.com/2reqtg.png'
     })
 
