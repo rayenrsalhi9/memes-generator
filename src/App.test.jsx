@@ -20,3 +20,15 @@ test('updates the top text', async () => {
 
 })
 
+test('updates the bottom text', async () => {
+
+    const user = userEvent.setup()
+    render(<App />)
+    const bottomTextbox = screen.getAllByRole('textbox').pop()
+
+    await user.clear(bottomTextbox)
+    await user.type(bottomTextbox, 'Code without coffee')
+
+    expect(screen.getByText('Code without coffee')).toBeInTheDocument()
+
+})
