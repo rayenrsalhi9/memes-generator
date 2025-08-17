@@ -10,7 +10,8 @@ export default function App() {
     const [meme, setMeme] = useState({
         topText: 'Shut up',
         bottomText: 'And take my money',
-        imageUrl: 'https://i.imgflip.com/2reqtg.png'
+        imageUrl: 'https://i.imgflip.com/2reqtg.png',
+        imageAltText: 'Shut Up'
     })
 
     useEffect(() => {
@@ -31,7 +32,11 @@ export default function App() {
     function getRandomMeme() {
         const randomIndex = Math.floor(Math.random() * allMemes.length)
         const randomMeme = allMemes[randomIndex]
-        setMeme(prev => ({...prev, imageUrl: randomMeme.url}))
+        setMeme(prev => ({
+            ...prev, 
+            imageUrl: randomMeme.url, 
+            imageAltText: randomMeme.name
+        }))
     }
 
     return (
