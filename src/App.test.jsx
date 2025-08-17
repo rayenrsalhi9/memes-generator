@@ -29,4 +29,15 @@ describe('App', () => {
 
         expect(screen.getByText('Code without coffee')).toBeInTheDocument()
     })
+
+    test('fetches a new image from API', async () => {
+        const user = userEvent.setup()
+        render(<App />)
+        const getImageBtn = screen.getByRole('button')
+
+        await user.click(getImageBtn)
+
+        const images = screen.getAllByRole('img')
+        expect(images[1].src).toBe('https://i.imgflip.com/1c1uej.jpg')
+    })
 })
